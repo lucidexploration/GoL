@@ -100,11 +100,7 @@ public class CellGUI extends JFrame implements ActionListener {
         frame.addKeyListener(new KeyAdapter() {
             public void keyPressed(KeyEvent e) {
                 if (e.getKeyCode() == KeyEvent.VK_S) {
-                    if (!isStarted) {
-                        isStarted = true;
-                    } else {
-                        isStarted = false;
-                    }
+                    isStarted=!isStarted;
                 }
             }
         });
