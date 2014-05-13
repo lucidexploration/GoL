@@ -22,11 +22,7 @@ public class Cell {
     //flip the cell state. dead if alive. alive if dead.
     //this is used for the mouseclick event.
     public static void Flip(int x, int y) {
-        if (cellArray[x][y] == true) {
-            cellArray[x][y] = false;
-        } else {
-            cellArray[x][y] = true;
-        }
+        cellArray[x][y]=!cellArray[x][y];
     }
 
     //set state of temp array to true
@@ -41,11 +37,7 @@ public class Cell {
 
     //returns state. true for alive, false for dead.
     public static boolean isAlive(int x, int y) {
-        if (cellArray[x][y] == true) {
-            return true;
-        } else {
-            return false;
-        }
+        return cellArray[x][y] == true;
     }
 
     //see if cells are overpopulated
